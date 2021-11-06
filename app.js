@@ -32,6 +32,7 @@ function initalize(){
     }
   ])
 }
+
 function buildTeam(){
   inquirer.prompt([
     {
@@ -102,7 +103,7 @@ function buildTeam(){
   });
 }
 function printHTML(team){
-  fs.writeFile("Team.html",team.stringfy(), (err) => {
+  fs.writeFile("Team.html",team, (err) => {
     if(err) {
       throw err;
     };
@@ -111,13 +112,10 @@ function printHTML(team){
   open("Team.html");
   };
 
-/* ==========================================================*/
-//START OF APP SEQUENCE 
-/* ==========================================================*/
+
 initalize()
 .then((answers)=>{
   const manager = new Manager(answers.name, answers.id, answers.email,answers.officeNumber);
   team.splice(team.length-1,0,manager.getHTML());
   buildTeam();
 });
-
