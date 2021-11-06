@@ -1,0 +1,21 @@
+{
+  "name": "7458300269624244673",
+  "version": "1.0.0",
+  "description": "A software engineer team generator command line application. Prompts user for information about the team manager and team members, returns an html page with all team information.",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.0",
+    "open": "^8.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
